@@ -5,7 +5,7 @@
 For this challenge, we are looking to imporve upon the original file that was provided to Steve. To do this we refactored the code used in Module 2 solution code. This was done by looping through all the data one time, using code efficiently and making it easier to compherend while collecting the same information. Following the refactor the run times where analyzed to determine on whether the refactor was successful in making the VBA script faster. 
 
 ## Results
-In our original data run within the green_stocks xlsm file we can see that the orignal AllStocksAnalysis sub macro for both the 2017 and 2018 runs are nearly one second as shown in both figure 1 and figure 2 below. While these appear to be fairly quick run times, we attempted to improve upon this by making use of a single for loop with multiple if else statements as shown in figure 3 below. This single for loop contains the main portion of the refactoring to inmprove speed. The single for loop incorporates several if statements that allow us to make use of the following arrays: tickerVolumes, Ticker, tickerStartingPrices, and tickerEndingPrices. The if statements set the ticker to 0 then moves on to identify starting and ending price, while maintaining the ticker number and finally outputing to the return column rows for appropriate tickers. As we can see in figure 4 and 5, our run times for the VBA refactored code was greatly improved for both 2017 and 2018. As shown in figure 6, there is almost an 87% decrease in the 2018 runtime! That is a great improvemoent  
+In our original data run within the green_stocks xlsm file we can see that the orignal AllStocksAnalysis sub macro for both the 2017 and 2018 runs are nearly one second as shown in both figure 1 and figure 2 below. While these appear to be fairly quick run times, we attempted to improve upon this by making use of a single for loop with multiple if else statements as shown in figure 3 below. This single for loop contains the main portion of the refactoring to inmprove speed. The single for loop incorporates several if statements that allow us to make use of the following arrays: tickerVolumes, Ticker, tickerStartingPrices, and tickerEndingPrices. The if statements set the ticker to 0 then moves on to identify starting and ending price, while maintaining the ticker number and finally outputing to the return column rows for appropriate tickers. As we can see in figure 4 and 5, our run times for the VBA refactored code was greatly improved for both 2017 and 2018. As shown in figure 6, there is almost an 87% decrease in the 2018 runtime! That is a great improvement that shows that our refactoring was successful.  
 
 <img src="https://user-images.githubusercontent.com/107224632/175447188-9885726e-f925-4bfd-bfa9-a9c591b7dbee.png" width=40% height=40%><br />
 *Figure 1: 2017 original data run time*
@@ -89,11 +89,9 @@ In our original data run within the green_stocks xlsm file we can see that the o
 
 
 
-##Summary:
-In a summary statement, address the following questions.
-What are the advantages or disadvantages of refactoring code?
-How do these pros and cons apply to refactoring the original VBA script?<br />
+## Summary:
+Refactoring code is beneficial when the updates made are efficent and produce a quicker runtime when using the same dataset for comparing the orignial code vs the new refactored code. In this case, the pros of refactoring the VBA code is that we produced nearly a 87% decrease in runtimes for the 2018 dataset. A potential con is when this refactored code is further altered to accomodate more tickers or using larger datasets. Further updates need to take into account that there may be ever more ways to make this efficient that do not use the current VBA code structure.
 
-###Footnotes
+### Footnotes
 
 <sup>a</sup> </sup>Screenshot from https://www.calculatorsoup.com/calculators/algebra/percentage-decrease-calculator.php </sup>
